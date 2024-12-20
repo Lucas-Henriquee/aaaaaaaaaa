@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    overflow: hidden;
+}
+
+.main-container {
+    position: relative;
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+    border: 5px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #87CEEB;
+    margin-top: 5%;
+}
+
+.runway {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #333;
+    border: 5px solid #222;
+    box-shadow: 0 0 10px black;
+}
+
+.runway::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: white;
+    transform: translateY(-50%);
+}
+
+.plane {
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+.plane.waiting {
+    background-color: orange;
+}
+
+.plane.landing {
+    background-color: green;
+}
+
+.plane.landed {
+    background-color: green;
+}
+
+.plane.departing {
+    background-color: red;
+}
+
+.timer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.restart-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    background-color: white;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    z-index: 2;
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
